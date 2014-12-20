@@ -1,4 +1,3 @@
-# Welcome to the Elarm Lighting Script
 # This script Drives Beaglebone GPIO pins to trigger a pattern switch on an
 # ATTINY85 microprocessor that is driving the display LEDs
 # it uses 4 pins to provide up to 16 patterns
