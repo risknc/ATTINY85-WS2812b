@@ -1,0 +1,58 @@
+How to program the Atmel microcontroller.
+
+FUN Bugs!
+
+1.	Do not have any virtual machines open as they upset the mapping of the "AVRDUDE" utility used by Arduino 1.5 to find the flash programmer.
+2.	Watch out for linker bugs in Arduino 1.5 os x, as if the file is around 4.1kb it will not compile.  To fix see below.
+>>
+
+  
+What do you need?
+
+1.	Atmel ATtiny85 (8kb ram)
+
+http://www.atmel.com/images/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf
+
+2.	Sparkfun Tiny AVR Programmer (PGM-11801)
+
+https://www.sparkfun.com/products/11801
+
+Note:  OSX & Linux do not need drivers.
+
+Instructions for Flashing.
+
+0. 	Plug in the ATtiny85 with the dot closest to the notch.
+1.	Download the Arduino application  (tested 1.5 for OSX & Windows).
+	Get two libraries, the statemachine & the adafruit neopixel library, located in repo.
+2.	Select Board Type from tools dropdown.
+	ATtiny 85 @ 1600 Mhz (Internal PLL, 4.3 V BOD) 
+3.	Select Programmer Type from tools dropdown.
+	USBTinyISP
+4.	Flash Firmware from tools dropdown.
+	This is required for a first time uninitialized chip.
+5.	Load the Arduino Sketch.
+	Current version called LSM.
+6.	Compile and upload to the Board.
+
+* How to fix:
+
+The following is how to apply the fix for MacOSX. 
+
+Get AVR crosspack (tested with 20090319), Arduino uses 20081205.
+
+Extract ld.zip. This should give you a single extensionless file "ld".
+
+Right-Click on Arduino.app
+Click "Show Package Contents"
+Due to MacOSx inability to merge folders, you will have to navigate to the correct folder yourself:
+/Contents/Resources/Java/hardware/tools/avr/avr/bin/
+
+Copy and replace "ld" with the version from the zip archive.=======
+
+
+How to fix the Audino programmer:
+
+Right click on the Arduino application, view package contents.
+Navigate to /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/avr/bin
+Backup the ld program in this directory.
+Copy the ld program from the directory to that location.

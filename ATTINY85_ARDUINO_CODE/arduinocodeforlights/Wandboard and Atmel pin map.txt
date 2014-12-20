@@ -1,0 +1,161 @@
+MAP:
+
+http://engineerzero.wordpress.com/2013/05/07/attiny-4585-pin-conventions-for-arduino-ide-sketches/
+
+http://highlowtech.org/?p=1695
+
+Wandboard JP4 Pinouts:
+
++5V			1	2	+5V
++5V			3	4	GPIO_0	gpio75	
++5V			5	6	GPIO_1	gpio91
+MOSI		7	8	GPIO_2  gpio191
+MISO		9  	10	GPIO_3  gpio24		White
+SCLK		11 	12	GPIO_4  gpio200		Green
+CS0			13 	14	GPIO_5	gpio90		Yellow
+CS1			15 	16	GPIO_6  gpio72		BROKEN
+GND			17 	18	GPIO_7  gpio101		Orange
+GND			19 	20	GND
+
+ATMEL ATtiny85 Pinouts:
+
+8	7	6	5
+DIP
+1	2	3	4
+
+8 VCC Power
+7 PB2 Orange
+6 PB1 Yellow
+5 PB0 Green
+4 Ground
+3 PB4 N/C
+2 PB3 White
+1 PB5 N/C	
+
+##These are just debugging notes..
+
+Turn on all GPIO's.
+
+./test_gpio.sh 76 out 1
+./test_gpio.sh 75 out 1
+./test_gpio.sh 74 out 1
+./test_gpio.sh 91 out 1
+./test_gpio.sh 90 out 1
+./test_gpio.sh 191 out 1
+./test_gpio.sh 72 out 1
+./test_gpio.sh 24 out 1
+./test_gpio.sh 101 out 1
+./test_gpio.sh 200 out 1
+
+Turn off all GPIO's
+
+./test_gpio.sh 76 out 0
+./test_gpio.sh 75 out 0
+./test_gpio.sh 74 out 0
+./test_gpio.sh 91 out 0
+./test_gpio.sh 90 out 0
+./test_gpio.sh 191 out 0
+./test_gpio.sh 72 out 0
+./test_gpio.sh 24 out 0
+./test_gpio.sh 101 out 0
+./test_gpio.sh 200 out 0
+
+Active Pins:
+
+OFF:
+./test_gpio.sh 90 out 0 
+./test_gpio.sh 91 out 0
+./test_gpio.sh 101 out 0 
+./test_gpio.sh 200 out 0
+
+FLASHING PURPLE:
+./test_gpio.sh 90 out 0 
+./test_gpio.sh 91 out 1
+./test_gpio.sh 101 out 1 
+./test_gpio.sh 200 out 1
+
+FLASHING PURPLE:
+./test_gpio.sh 90 out 0  
+./test_gpio.sh 91 out 0 
+./test_gpio.sh 101 out 1 
+./test_gpio.sh 200 out 1
+
+FLASHING ORANGE:
+./test_gpio.sh 90 out 0 
+./test_gpio.sh 91 out 1
+./test_gpio.sh 101 out 0 
+./test_gpio.sh 200 out 1
+
+BRIGHT WHITE:
+./test_gpio.sh 90 out 0 
+./test_gpio.sh 91 out 1
+./test_gpio.sh 101 out 1
+./test_gpio.sh 200 out 0
+
+FLASHING WHITE (DIM):
+./test_gpio.sh 90 out 1
+./test_gpio.sh 91 out 0
+./test_gpio.sh 101 out 1 
+./test_gpio.sh 200 out 0
+
+BRIGHT WHITE:
+./test_gpio.sh 90 out 0
+./test_gpio.sh 91 out 0
+./test_gpio.sh 101 out 1 
+./test_gpio.sh 200 out 0
+
+FLASHING RED (FAST):
+./test_gpio.sh 90 out 0 
+./test_gpio.sh 91 out 0
+./test_gpio.sh 101 out 0 
+./test_gpio.sh 200 out 1
+
+FLASHING WHITE (DIM):
+./test_gpio.sh 90 out 1 
+./test_gpio.sh 91 out 0
+./test_gpio.sh 101 out 0 
+./test_gpio.sh 200 out 0
+
+FLASHING WHITE (DIM):
+./test_gpio.sh 90 out 1 
+./test_gpio.sh 91 out 1
+./test_gpio.sh 101 out 0 
+./test_gpio.sh 200 out 0
+
+SLOW FLASHING ORANGE:
+./test_gpio.sh 90 out 1 
+./test_gpio.sh 91 out 1
+./test_gpio.sh 101 out 0 
+./test_gpio.sh 200 out 1
+
+FLASHING WHITE (FAST):
+./test_gpio.sh 90 out 1 
+./test_gpio.sh 91 out 0
+./test_gpio.sh 101 out 1 
+./test_gpio.sh 200 out 0
+
+FLASHING ORANGE (SLOW):
+./test_gpio.sh 90 out 1 
+./test_gpio.sh 91 out 0
+./test_gpio.sh 101 out 0 
+./test_gpio.sh 200 out 1
+
+OFF:
+./test_gpio.sh 90 out 0 
+./test_gpio.sh 91 out 1
+./test_gpio.sh 101 out 0 
+./test_gpio.sh 200 out 0
+
+FLASHING PURPLE FAST:
+./test_gpio.sh 90 out 0 
+./test_gpio.sh 91 out 0
+./test_gpio.sh 101 out 1 
+./test_gpio.sh 200 out 1
+
+FLASHING BLUE FAST:
+./test_gpio.sh 90 out 1 
+./test_gpio.sh 91 out 1
+./test_gpio.sh 101 out 1 
+./test_gpio.sh 200 out 1
+
+
